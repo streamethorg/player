@@ -8,7 +8,7 @@ import {
 function MyApp({ Component, pageProps }) {
   const client = createReactClient({
     provider: studioProvider({
-      apiKey: process.env.LIVEPEER_API_KEY,
+      apiKey: process.env.NEXT_PUBLIC_LIVEPEER_API_KEY,
     }),
   });
 
