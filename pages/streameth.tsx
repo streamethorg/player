@@ -1,18 +1,15 @@
 import React from "react";
 import { useRouter } from "next/router";
 import OfflineView from "components/Offline";
-import {
-  Player,
-  useStream,
-} from "@livepeer/react";
+import { Player, useStream } from "@livepeer/react";
 import PoweredBy from "components/PoweredBy";
 export default function Iframe() {
   const router = useRouter();
   const { query } = router;
-  const { streamid, poster } = query;
+  const { streamId, poster } = query;
 
   const { data: stream } = useStream({
-    streamId: streamid as string,
+    streamId: streamId as string,
     refetchInterval: (stream) => (!stream?.isActive ? 5000 : false),
   });
 
