@@ -15,7 +15,7 @@ import {
 import * as Player from "@livepeer/react/player";
 import * as Popover from "@radix-ui/react-popover";
 import { ClipPayload } from "livepeer/dist/models/components";
-import { CheckIcon, ChevronDownIcon, XIcon } from "lucide-react";
+
 import React, { useCallback, useTransition } from "react";
 import { toast } from "sonner";
 
@@ -290,7 +290,7 @@ export const Settings = React.forwardRef(function Search(
                 >
                   <Player.SelectValue placeholder="Select a speed..." />
                   <Player.SelectIcon>
-                    <ChevronDownIcon className="h-4 w-4" />
+                    {/* <ChevronDownIcon className="h-4 w-4" /> */}
                   </Player.SelectIcon>
                 </Player.SelectTrigger>
                 <Player.SelectPortal>
@@ -327,7 +327,7 @@ export const Settings = React.forwardRef(function Search(
                 >
                   <Player.SelectValue placeholder="Select a quality..." />
                   <Player.SelectIcon>
-                    <ChevronDownIcon className="h-4 w-4" />
+                    {/* <ChevronDownIcon className="h-4 w-4" /> */}
                   </Player.SelectIcon>
                 </Player.SelectTrigger>
                 <Player.SelectPortal>
@@ -360,7 +360,8 @@ export const Settings = React.forwardRef(function Search(
             className="rounded-full h-5 w-5 inline-flex items-center justify-center absolute top-2.5 right-2.5 outline-none"
             aria-label="Close"
           >
-            <XIcon />
+            <p>close</p>
+            {/* <XIcon /> */}
           </Popover.Close>
           <Popover.Arrow className="fill-white/50" />
         </Popover.Content>
@@ -384,7 +385,8 @@ export const RateSelectItem = React.forwardRef<
     >
       <Player.SelectItemText>{children}</Player.SelectItemText>
       <Player.SelectItemIndicator className="absolute left-0 w-[25px] inline-flex items-center justify-center">
-        <CheckIcon className="w-4 h-4" />
+        {/* <CheckIcon className="w-4 h-4" /> */}
+        <p>check</p>
       </Player.SelectItemIndicator>
     </Player.RateSelectItem>
   );
@@ -408,7 +410,8 @@ export const VideoQualitySelectItem = React.forwardRef<
     >
       <Player.SelectItemText>{children}</Player.SelectItemText>
       <Player.SelectItemIndicator className="absolute left-0 w-[25px] inline-flex items-center justify-center">
-        <CheckIcon className="w-4 h-4" />
+        {/* <CheckIcon className="w-4 h-4" /> */}
+        <p>check</p>
       </Player.SelectItemIndicator>
     </Player.VideoQualitySelectItem>
   );
