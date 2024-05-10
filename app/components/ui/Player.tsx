@@ -17,7 +17,6 @@ import * as Popover from "@radix-ui/react-popover";
 import { ClipPayload } from "livepeer/dist/models/components";
 
 import React, { useCallback, useTransition } from "react";
-import { toast } from "sonner";
 
 import { Src } from "@livepeer/react";
 import { cn } from "@/app/lib/utils/utils";
