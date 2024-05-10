@@ -14,9 +14,8 @@ import {
 } from "@livepeer/react/assets";
 import * as Player from "@livepeer/react/player";
 import * as Popover from "@radix-ui/react-popover";
-import { ClipPayload } from "livepeer/dist/models/components";
 
-import React, { useCallback, useTransition } from "react";
+import React from "react";
 
 import { Src } from "@livepeer/react";
 import { cn } from "@/app/lib/utils/utils";
