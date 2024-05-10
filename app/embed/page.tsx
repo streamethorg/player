@@ -1,6 +1,6 @@
 import Player from "../components/ui/Player";
 // import { notFound } from "next/navigation";
-// import { Suspense } from "react";
+import { Suspense } from "react";
 // import { Livepeer } from "livepeer";
 // import { getSrc } from "@livepeer/react/external";
 import { EmbedPageParams } from "../lib/types";
@@ -47,14 +47,15 @@ const EmbedPage = async ({ searchParams }: EmbedPageParams) => {
   // const src = getSrc(playbackInfo.playbackInfo);
 
   return (
-    // <Suspense>
-    //   <Embed
-    //     playbackId={searchParams?.playbackId}
-    //     vod={searchParams.vod}
-    //     videoSrc={src?.[1].src}
-    //   />
-    // </Suspense>
-    <p>Hello text</p>
+    <div>
+      <Embed
+        playbackId={searchParams?.playbackId}
+        vod={searchParams.vod}
+        // videoSrc={src?.[1].src}
+        videoSrc={`https://livepeercdn.studio/hls/${searchParams?.playbackId}/index.m3u8`}
+      />
+    </div>
+    // <p>Hello text</p>
     // <iframe
     //   src="https://player-five-rho.vercel.app/embed?playbackId=1051kh7p17jz1q5a&vod=true&streamId=dba982f4-2e69-414c-8a2b-aa1f79482633"
     //   sandbox=""
