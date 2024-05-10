@@ -1,8 +1,8 @@
 import Player from "../components/ui/Player";
-import { notFound } from "next/navigation";
-import { Suspense } from "react";
-import { Livepeer } from "livepeer";
-import { getSrc } from "@livepeer/react/external";
+// import { notFound } from "next/navigation";
+// import { Suspense } from "react";
+// import { Livepeer } from "livepeer";
+// import { getSrc } from "@livepeer/react/external";
 import { EmbedPageParams } from "../lib/types";
 
 const Embed = ({
@@ -37,23 +37,30 @@ const Embed = ({
 };
 const EmbedPage = async ({ searchParams }: EmbedPageParams) => {
   if (!searchParams.playbackId) {
-    return notFound();
+    // return notFound();
   }
-  const livepeer = new Livepeer({
-    apiKey: process.env.LIVEPEER_API_KEY,
-  });
+  // const livepeer = new Livepeer({
+  //   apiKey: process.env.LIVEPEER_API_KEY,
+  // });
 
-  const playbackInfo = await livepeer.playback.get(searchParams.playbackId);
-  const src = getSrc(playbackInfo.playbackInfo);
+  // const playbackInfo = await livepeer.playback.get(searchParams.playbackId);
+  // const src = getSrc(playbackInfo.playbackInfo);
 
   return (
-    <Suspense>
-      <Embed
-        playbackId={searchParams?.playbackId}
-        vod={searchParams.vod}
-        videoSrc={src?.[1].src}
-      />
-    </Suspense>
+    // <Suspense>
+    //   <Embed
+    //     playbackId={searchParams?.playbackId}
+    //     vod={searchParams.vod}
+    //     videoSrc={src?.[1].src}
+    //   />
+    // </Suspense>
+    <p>Hello text</p>
+    // <iframe
+    //   src="https://player-five-rho.vercel.app/embed?playbackId=1051kh7p17jz1q5a&vod=true&streamId=dba982f4-2e69-414c-8a2b-aa1f79482633"
+    //   sandbox=""
+    //   width={640}
+    //   height={480}
+    // ></iframe>
   );
 };
 
