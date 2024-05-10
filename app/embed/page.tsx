@@ -36,9 +36,9 @@ const Embed = ({
   );
 };
 const EmbedPage = async ({ searchParams }: EmbedPageParams) => {
-  if (!searchParams.playbackId) {
-    // return notFound();
-  }
+  // if (!searchParams.playbackId) {
+  // return notFound();
+  // }
   // const livepeer = new Livepeer({
   //   apiKey: process.env.LIVEPEER_API_KEY,
   // });
@@ -47,22 +47,12 @@ const EmbedPage = async ({ searchParams }: EmbedPageParams) => {
   // const src = getSrc(playbackInfo.playbackInfo);
 
   return (
-    <div>
-      <Embed
-        playbackId={searchParams?.playbackId}
-        vod={searchParams.vod}
-        // videoSrc={src?.[1].src}
-        videoSrc={`https://livepeercdn.studio/hls/${searchParams?.playbackId}/index.m3u8`}
-      />
-    </div>
-    // <p>Hello text</p>
-    // <iframe
-    //   src="https://player-five-rho.vercel.app/embed?playbackId=1051kh7p17jz1q5a&vod=true&streamId=dba982f4-2e69-414c-8a2b-aa1f79482633"
-    //   sandbox=""
-    //   width={640}
-    //   height={480}
-    // ></iframe>
+    <iframe
+      src={`https://lvpr.tv?v=${searchParams?.playbackId}`}
+      allowFullScreen
+      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+      style={{ height: "100vh", width: "100%" }}
+    ></iframe>
   );
 };
-
 export default EmbedPage;
